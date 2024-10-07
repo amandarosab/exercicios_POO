@@ -1,0 +1,59 @@
+Exercise 2: Library Book System Using Single Book Object (Medium)
+
+Objective: Implement a library management system where you can manage a single book at a time. 
+The system should allow adding a book, displaying book details, and updating book status 
+(e.g., if it’s available or loaned).
+
+Class Diagram:
+
++-------------------------+
+|          Book           |
++-------------------------+
+| - id: int               |
+| - title: String         |
+| - author: String        |
+| - isAvailable: boolean  |
++-------------------------+
+| + Book(int, String, String)       |
+| + displayBookDetails(): void      |
+| + loanBook(): void                |
+| + returnBook(): void              |
+| + getId(): int                    |
+| + isAvailable(): boolean          |
++-------------------------+
+
++-------------------------+
+|          Library        |
++-------------------------+
+| - book: Book            |
++-------------------------+
+| + addBook(Book): void          |
+| + displayCurrentBook(): void   |
+| + loanBook(): void             |
+| + returnBook(): void           |
++-------------------------+
+successfully
+
+
+
+ if (isAvailable == true) {
+            System.out.println("AVAILABLE, the book is ready to borrow :)");
+            return true;
+        }
+
+        else {
+            System.out.println("LOANED, the book isn't available :( Please try again in a few days");
+            return false;
+        }
+
+
+
+
+{
+        LocalDateTime currentDate = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String formattedCurrentDate = currentDate.format(formatter);
+        LocalDateTime tenDaysFromNow = currentDate.plusDays(10);
+        String formattedReturnDate = tenDaysFromNow.format(formatter);
+        System.out.println("The book should be returned to the library in 10 days: " + formattedReturnDate);
+    }

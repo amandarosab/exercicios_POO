@@ -1,18 +1,26 @@
-## Getting Started
+# Employee Salary Calculator 💼
+Este programa em Java permite calcular o salário líquido de um colaborador após a aplicação de impostos e ajustar o salário com base em um percentual de aumento. Foi criado para praticar conceitos de Programação Orientada a Objetos (POO), como encapsulamento e métodos.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Funcionalidades 📋
+- Entrada do nome do colaborador
+- Cálculo do salário líquido após aplicação de imposto
+- Aumento percentual do salário bruto
+- Exibição das informações atualizadas do colaborador (nome e salário)
 
-## Folder Structure
+## Como funciona? ⚙️
+O programa solicita ao usuário os seguintes dados:
+- Nome do colaborador
+- Salário bruto
+- Valor do imposto aplicado
+- Porcentagem de aumento a ser aplicada no salário
+Após isso, ele calcula o salário líquido (salário bruto menos imposto) e, se necessário, aplica o aumento ao salário bruto com base na porcentagem informada
 
-The workspace contains two folders by default, where:
+## Estrutura do código 🛠️
+- String name: Nome do colaborador
+- double grossSalary: Salário bruto do colaborador
+- double tax: Imposto aplicado sobre o salário
+- netSalary(): Retorna o salário líquido após subtração do imposto
+- increaseSalary(double percentage): Aumenta o salário bruto com base na porcentagem fornecida
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Contribuição 🤝
+Sinta-se à vontade para abrir uma issue ou enviar um pull request se tiver sugestões ou encontrar problemas!
